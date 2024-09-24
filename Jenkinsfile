@@ -13,7 +13,8 @@ pipeline {
             steps {
                 script {
                     // Build the Docker image
-                    docker.build('docker')
+              docker.build("docker", "-f /var/lib/jenkins/workspace/docker/.")
+
                 }
             }
         }
